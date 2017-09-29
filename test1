@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+      function add(a) {
+        return a + 1;
+      }
+
+      function times(a) {
+        return a * 2;
+      }
+
+      function compose(a, b) {
+        return function(c) {
+          return a(b(c));
+        }
+      }
+
+      var addOfTimes = compose(add, times);
+      console.log(addOfTimes(5));
+    </script>
+</head>
+<body>
+</body>
+</html>
